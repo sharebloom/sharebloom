@@ -1,0 +1,25 @@
+include ../mixins/header
+include ../mixins/footer
+
+block var
+
+<!DOCTYPE html>
+html
+	head
+		title #{title}
+		link(rel="stylesheet" href="style.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		link(rel="icon" type="image/png" sizes="16x16" href="img/favicon.png")
+
+	body
+		// header
+		+header()
+
+		// content
+		block content
+
+		// footer
+		+footer()
+
+		// script
+		block script

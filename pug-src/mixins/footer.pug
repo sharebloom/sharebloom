@@ -1,0 +1,16 @@
+mixin footer()
+	footer.flex.justify-center
+		+container()
+			- social = [ 'telegram', 'facebook', 'twitter', 'instagram' ]
+			ul.social-links.flex.justify-center
+				for icon in social
+					li
+						a(href="" class= "icon-" + icon)
+			ul.footer-nav.flex.justify-center
+				- nav = [ 'Privacy Policy', 'Terms of Use' ]
+				- hrefs = [ 'terms', 'privacy' ]
+				for item, i in nav
+					li
+						a(href= hrefs[i] + '.html')= item
+				li All Rights Reserved with Fleurn
+

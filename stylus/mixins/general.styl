@@ -1,0 +1,33 @@
+square(val)
+	width val
+	height val
+	display block
+
+resprop(prop, args...)
+	if(args[0])
+		+above(xl)
+			{prop} args[0]
+		+below(xl)
+			{prop} args[1]
+	else
+		+above(lg)
+			{prop} args[1]
+
+	if(args[2])
+		+below(lg)
+			{prop} args[2]
+
+	if(args[3])
+		+below(md)
+			{prop} args[3]
+
+	if(args[4])
+		+below(sm)
+			{prop} args[4]
+
+makeBox()
+	border-radius 5px
+	background #fff
+	position relative
+	border 1px solid #DFE2EF
+	box-shadow 0 5px 5px 0px rgba(0,0,0,.05)

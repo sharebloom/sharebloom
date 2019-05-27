@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+html
+	font-size 18px
+	+below(md)
+		font-size 16px
+
+body
+	font-family 'Lato', sans-serif
+	font-weight 400
+	background lightpink
+	color black
+
+h1
+	font-size 42px
+	margin-bottom 20px
+	font-weight 400
+	+below(md)
+		font-size 30px
+
+h2
+	font-size 35px
+	font-weight 400
+	margin-bottom 20px
+	+below(md)
+		font-size 26px
+
+h3
+	font-size 30px
+
+h4
+	font-size 24px
+
+h5
+	font-size 17px
+	font-weight 300
+
+h6
+	font-size 15px
+	font-weight 300
+
+p
+	font-weight 300
+	line-height 1.5
+	+ p
+		margin-top 10px
+	&.size-big
+		font-size 20px
+		+below(md)
+			font-size 18px
+	.link
+		color blue
+		text-decoration underline
+
+a
+	text-decoration none
+
+.flex
+	> div
+		box-sizing border-box
+
+.bold
+	font-weight 700 !important
+
+.link
+	text-decoration underline
+	color blue
+	cursor pointer
+
+.container
+	+below(md)
+		padding 0 30px
+	+below(sm)
+		padding 0 20px

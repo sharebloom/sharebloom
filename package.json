@@ -1,0 +1,21 @@
+{
+  "name": "fleurn",
+  "version": "1.0.0",
+  "description": "Flowers delivered to your door every month",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"pug": "pug pug --out ./ --watch --pretty --basedir ./",
+		"stylus": "stylus -w -c -m --include-css stylus/style.styl -o style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "balapa",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

@@ -1,0 +1,112 @@
+section.w-pd
+	padding 100px 0
+	+below(lg)
+		padding 75px 0
+	+below(md)
+		padding 50px 0
+
+// hero
+#hero
+	position relative
+	box-sizing border-box
+	+above(lg)
+		min-height 100vh
+	+below(lg)
+		margin-top 80px
+
+	// .hero-content
+	// 	padding 120px 0
+	// 	+below(xl)
+	// 		padding 100px 0
+	// 	+below(md)
+	// 		padding 75px 0 0
+
+	.hero-img
+		box-sizing border-box
+		position relative
+		overflow hidden
+		+above(lg)
+			border-right 40px solid lightpink
+		+below(md)
+			margin-top 30px
+		img
+			display block
+		.clouds-wrapper
+			margin-bottom 10px
+			position relative
+		.clouds
+			width 100%
+			margin auto
+			padding 0 10%
+			box-sizing border-box
+		.clouds-2
+			position absolute
+			top 0
+			left 100%
+		.man
+			width 80%
+			position relative
+			z-index 1
+		.ground-wrapper
+			border-bottom 1px solid #003D6B
+		.ground
+			position absolute
+			bottom 0
+			left 0
+			width 100%
+		.ground-2
+			left 100%
+
+// banner
+#banner
+	.container
+		padding-top 65px
+		padding-bottom 65px
+		border-bottom 1px solid #E1E8F2
+		+below(lg)
+			padding-bottom 30px
+	.content
+		img
+			margin-right 20px
+
+// subscribe
+#subscribe
+	background linear-gradient(to bottom, lightpink, lightpink2)
+	border-bottom-right-radius sectionRadius
+	+below(md)
+		border-bottom-right-radius (sectionRadius/2)
+	text-align center
+	.subscribe-features
+		margin-top 50px
+		.feature-item
+			&:not(:last-child)
+				+below(md)
+					margin-bottom 20px
+			padding 10px
+			img
+				height 100px
+				+below(lg)
+					height 70px
+				margin-bottom 10px
+
+// features
+#features
+	padding-top 50px
+	.feature-img
+		img
+			display block
+			width 100%
+
+// sign up
+#signup
+	text-align center
+	background lightpink2
+	position relative
+	border-top-left-radius sectionRadius
+	+below(md)
+		border-top-left-radius (sectionRadius/2)
+	.pattern
+		position absolute
+		top 0
+		right 0
+		width 30%
