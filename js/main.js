@@ -30,8 +30,6 @@ burgerMenu.addEventListener('click', function() {
 	header.classList.toggle('show-mobile-menu');
 });
 
-var groundWrapper = document.querySelector('#hero .ground-wrapper');
-var wrapperWidth = groundWrapper.clientWidth;
 var heroTL = new TimelineMax({
 	repeat: -1
 });
@@ -41,12 +39,7 @@ function loop(el, duration) {
 	TweenMax
 		.to(el, duration, {
 			ease: Linear.easeNone,
-			x: '-=' + wrapperWidth,
-			modifiers: {
-				y: function(x) {
-					return x % wrapperWidth;
-				}
-			},
+			x: '-=100%',
 			repeat: -1
 		})
 }
@@ -142,27 +135,27 @@ if(staggerAnims) {
 }
 
 // popup
-var popup = document.querySelector('#popup');
-var openTrigger = document.querySelectorAll('.open-popup-trigger');
-var closeTrigger = document.querySelector('.close-popup-trigger');
+// var popup = document.querySelector('#popup');
+// var openTrigger = document.querySelectorAll('.open-popup-trigger');
+// var closeTrigger = document.querySelector('.close-popup-trigger');
 
-openTrigger.forEach(function(open) {
-	open.addEventListener('click', function() {
-		var data = this.getAttribute('data-popup');
-		popup.classList.add('is-active', data);
-	})
-})
+// openTrigger.forEach(function(open) {
+// 	open.addEventListener('click', function() {
+// 		var data = this.getAttribute('data-popup');
+// 		popup.classList.add('is-active', data);
+// 	})
+// })
 
-closeTrigger.addEventListener('click', function() {
-	closePopup();
-});
+// closeTrigger.addEventListener('click', function() {
+// 	closePopup();
+// });
 
-body.addEventListener('keyup', function(e) {
-	if(e.keyCode == 27) {
-		closePopup();
-	}
-});
+// body.addEventListener('keyup', function(e) {
+// 	if(e.keyCode == 27) {
+// 		closePopup();
+// 	}
+// });
 
-function closePopup() {
-	popup.className = '';
-}
+// function closePopup() {
+// 	popup.className = '';
+// }

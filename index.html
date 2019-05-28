@@ -7,41 +7,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png"/>
   </head>
   <body>
-    <!-- popup-->
-    <div id="popup">
-      <div class="close-popup-trigger">
-        <svg height="100%" viewBox="0 0 14 14" width="100%" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7 14 1.4z"></path>
-        </svg>
-      </div>
-      <div class="popup viral-loops flex justify-center">
-        <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex justify-center align-center">
-          <div class="content anim-item"><div data-vl-widget="embedForm"></div></div>
-        </div>
-      </div>
-      <div class="popup mailchimp flex justify-center">
-        <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex justify-center align-center">
-          <div class="content">
-            <h3 class="anim-item">Subscribe</h3>
-            <p class="anim-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-            <form class="flex flex--unwrap anim-item">
-              <input type="email" placeholder="Email Address" required="required"/>
-              <input type="submit" value="Send"/>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- header-->
     <header class="flex justify-center">
       <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex align-center"><a class="logo" href="index.html"><img src="img/logo.svg" alt="Sharebloom"/></a>
         <ul class="nav flex align-center">
-          <li>
-            <div class="btn btn--ghost open-popup-trigger" data-popup="viral-loops">skip the waiting list</div>
-          </li>
-          <li>
-            <div class="btn btn--default open-popup-trigger" data-popup="mailchimp">Register now</div>
-          </li>
+          <li><a class="btn btn--ghost" href="https://pages.viral-loops.com/Sharebloom-Prelaunch-ik6lCZuy">skip the waiting list</a></li>
+          <li><a class="btn btn--default" href="https://pages.viral-loops.com/Sharebloom-Prelaunch-ik6lCZuy">Register now</a></li>
         </ul>
         <div class="burger-menu">
           <div class="bar bar--top"></div>
@@ -50,15 +21,13 @@
         </div>
       </div>
     </header>
-    <!-- content-->
     <!-- hero-->
     <section class="flex align-center justify-between stagger-animation" id="hero" data-scroll="false">
       <div class="container col-lg-6 offset-lg-0 col-md-8 offset-md-1 col-12 flex justify-center">
         <div class="hero-content col-xl-9 offset-xl-3 col-lg-10 offset-lg-2 col-12 flex">
           <h1 class="col-lg-10 col-12 anim-item">Flowers delivered to your door every month</h1>
           <p class="size-big col-lg-9 col-12 anim-item">Flowers delivered to you or your significant other in Downtown Toronto from amazing florists. Change or cancel your plan at any time. No questions asked.</p>
-          <div class="button-wrapper col-12 anim-item">
-            <div class="btn btn--default btn--big open-popup-trigger" data-popup="mailchimp">Register now</div>
+          <div class="button-wrapper col-12 anim-item"><a class="btn btn--default btn--big" href="https://pages.viral-loops.com/Sharebloom-Prelaunch-ik6lCZuy">Register now</a>
             <h6>Coming Summer 2019</h6>
           </div>
         </div>
@@ -74,8 +43,7 @@
       <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex justify-between align-center">
         <div class="content col-xl-5 col-md-7 flex flex--unwrap align-center anim-item"><img src="img/hi.png" alt="Skip the waiting list"/>
           <p>If I were you, I would consider getting this for my significant other  👀</p>
-        </div>
-        <div class="btn btn--silver btn--big open-popup-trigger anim-item" data-popup="viral-loops">Skip the waiting list</div>
+        </div><a class="btn btn--silver btn--big anim-item" href="https://pages.viral-loops.com/Sharebloom-Prelaunch-ik6lCZuy">Skip the waiting list</a>
       </div>
     </section>
     <!-- subscribe-->
@@ -140,9 +108,7 @@
       <div class="container col-xl-6 col-lg-7 col-md-8 col-10">
         <h2 class="anim-item">Sign up today to get exclusive early bird access</h2>
         <p class="anim-item">If you live in Toronto, subscribe today to get notifications for when we launch and you will get in on excluisve promos for early subscribers</p>
-        <div class="button-wrapper anim-item">
-          <div class="btn btn--default btn--big open-popup-trigger" data-popup="mailchimp">sign up now</div>
-        </div>
+        <div class="button-wrapper anim-item"><a class="btn btn--default btn--big" href="https://pages.viral-loops.com/Sharebloom-Prelaunch-ik6lCZuy">sign up now</a></div>
       </div>
     </section>
     <!-- footer-->
@@ -161,6 +127,7 @@
       </div>
     </footer>
     <!-- viral loops script--><script>!function(){var a=window.VL=window.VL||{};return a.instances=a.instances||{},a.invoked?void(window.console&&console.error&&console.error("VL snippet loaded twice.")):(a.invoked=!0,void(a.load=function(b,c,d){var e={};e.publicToken=b,e.config=c||{};var f=document.createElement("script");f.type="text/javascript",f.id="vrlps-js",f.defer=!0,f.src="https://app.viral-loops.com/client/vl/vl.min.js";var g=document.getElementsByTagName("script")[0];return g.parentNode.insertBefore(f,g),f.onload=function(){a.setup(e),a.instances[b]=e},e.identify=e.identify||function(a,b){e.afterLoad={identify:{userData:a,cb:b}}},e.pendingEvents=[],e.track=e.track||function(a,b){e.pendingEvents.push({event:a,cb:b})},e.pendingHooks=[],e.addHook=e.addHook||function(a,b){e.pendingHooks.push({name:a,cb:b})},e.$=e.$||function(a){e.pendingHooks.push({name:"ready",cb:a})},e}))}();var campaign=VL.load("X6xhxTQb72G5x2CTT2OmQu4jChA",{autoLoadWidgets:!0});</script>
+    <!-- crisp script--><script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="d6322624-d956-40c4-a750-2bb2863ba2e5";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
     <!-- script-->
     <script src="js/ScrollMonitor.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
