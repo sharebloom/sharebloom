@@ -22,11 +22,13 @@ h2
 	font-size 35px
 	font-weight 400
 	margin-bottom 20px
+	line-height 1.25
 	+below(md)
-		font-size 26px
+		font-size 24px
 
 h3
 	font-size 30px
+	margin-bottom 20px
 
 h4
 	font-size 24px
@@ -44,6 +46,8 @@ p
 	line-height 1.5
 	+ p
 		margin-top 10px
+	+ form
+		margin-top 20px
 	&.size-big
 		font-size 20px
 		+below(md)
@@ -72,3 +76,34 @@ a
 		padding 0 30px
 	+below(sm)
 		padding 0 20px
+
+.anim-item
+	opacity 0
+
+// input
+input
+	&:not([type="checkbox"])
+		padding 10px 20px 13px
+		-webkit-appearance none
+		-moz-appearance none
+		border none
+		font-size 16px
+		font-family lato
+		border 1px solid #ddd
+		border-radius 30px
+		transition .3s all ease
+		color black
+		&:focus
+			border-color pink
+
+	&[type="submit"]
+		background pink
+		color #fff
+		border-color pink
+		cursor pointer
+		&:hover
+			background darken(pink, 10%)
+			border-color darken(pink, 10%)
+	
+	&:focus
+		outline none

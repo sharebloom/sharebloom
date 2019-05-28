@@ -1,11 +1,12 @@
 mixin footer()
 	footer.flex.justify-center
 		+container()
-			- social = [ 'telegram', 'facebook', 'twitter', 'instagram' ]
+			- social = [ 'facebook', 'twitter', 'instagram' ]
+			- hrefs = [ 'http://facebook.com/sharebloom', 'http://twitter.com/sharebloom ', 'http://instagram.com/sharebloom ' ]
 			ul.social-links.flex.justify-center
-				for icon in social
+				for icon, i in social
 					li
-						a(href="" class= "icon-" + icon)
+						a(href= hrefs[i] class= "icon-" + icon)
 			ul.footer-nav.flex.justify-center
 				- nav = [ 'Privacy Policy', 'Terms of Use' ]
 				- hrefs = [ 'terms', 'privacy' ]

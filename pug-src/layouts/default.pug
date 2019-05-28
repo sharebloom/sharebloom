@@ -12,6 +12,25 @@ html
 		link(rel="icon" type="image/png" sizes="16x16" href="img/favicon.png")
 
 	body
+		// popup
+		#popup
+			.close-popup-trigger
+				svg(height='100%', viewBox='0 0 14 14', width='100%', xmlns='http://www.w3.org/2000/svg')
+					path(d='M14 1.4L12.6 0 7 5.6 1.4 0 0 1.4 5.6 7 0 12.6 1.4 14 7 8.4l5.6 5.6 1.4-1.4L8.4 7 14 1.4z')
+
+			.popup.viral-loops.flex.justify-center
+				+container('flex justify-center align-center')
+					.content
+						<div data-vl-widget="embedForm"></div>
+			.popup.mailchimp.flex.justify-center
+				+container('flex justify-center align-center')
+					.content
+						h3 Subscribe
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+						form.flex.flex--unwrap
+							input(type="email" placeholder="Email Address" required)
+							input(type="submit" value="Send")
+
 		// header
 		+header()
 
@@ -20,6 +39,9 @@ html
 
 		// footer
 		+footer()
+
+		// viral loops script
+		<script>!function(){var a=window.VL=window.VL||{};return a.instances=a.instances||{},a.invoked?void(window.console&&console.error&&console.error("VL snippet loaded twice.")):(a.invoked=!0,void(a.load=function(b,c,d){var e={};e.publicToken=b,e.config=c||{};var f=document.createElement("script");f.type="text/javascript",f.id="vrlps-js",f.defer=!0,f.src="https://app.viral-loops.com/client/vl/vl.min.js";var g=document.getElementsByTagName("script")[0];return g.parentNode.insertBefore(f,g),f.onload=function(){a.setup(e),a.instances[b]=e},e.identify=e.identify||function(a,b){e.afterLoad={identify:{userData:a,cb:b}}},e.pendingEvents=[],e.track=e.track||function(a,b){e.pendingEvents.push({event:a,cb:b})},e.pendingHooks=[],e.addHook=e.addHook||function(a,b){e.pendingHooks.push({name:a,cb:b})},e.$=e.$||function(a){e.pendingHooks.push({name:"ready",cb:a})},e}))}();var campaign=VL.load("X6xhxTQb72G5x2CTT2OmQu4jChA",{autoLoadWidgets:!0});</script>
 
 		// script
 		block script

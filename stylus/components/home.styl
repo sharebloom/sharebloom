@@ -13,20 +13,13 @@ section.w-pd
 		min-height 100vh
 	+below(lg)
 		margin-top 80px
-
-	// .hero-content
-	// 	padding 120px 0
-	// 	+below(xl)
-	// 		padding 100px 0
-	// 	+below(md)
-	// 		padding 75px 0 0
+	+below(md)
+		margin-top 40px
 
 	.hero-img
 		box-sizing border-box
 		position relative
 		overflow hidden
-		// +above(lg)
-		// 	border-right 40px solid lightpink
 		+below(md)
 			margin-top 30px
 		img
@@ -60,14 +53,18 @@ section.w-pd
 // banner
 #banner
 	.container
-		padding-top 65px
-		padding-bottom 65px
+		padding-top 40px
+		padding-bottom 40px
 		border-bottom 1px solid #E1E8F2
 		+below(lg)
 			padding-bottom 30px
 	.content
 		img
 			margin-right 20px
+	.btn
+		margin 15px 0
+		+below(md)
+			margin 15px auto
 
 // subscribe
 #subscribe
@@ -92,10 +89,21 @@ section.w-pd
 // features
 #features
 	padding-top 50px
+	.feature-content
+		+between(md, lg)
+			padding 80px 0
 	.feature-img
+		+below(md)
+			margin 30px auto 50px
 		img
 			display block
 			width 100%
+
+	.feature-item
+		&:nth-child(odd)
+			+below(md)
+				.feature-img
+					order 1
 
 // sign up
 #signup

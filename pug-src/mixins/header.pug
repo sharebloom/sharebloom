@@ -1,9 +1,14 @@
 mixin header()
 	header.flex.justify-center
 		+container('flex align-center')
-			a.logo(href="index.html") Fleurn.
+			a.logo(href="index.html")
+				img(src="img/logo.svg" alt="Sharebloom")
 			ul.nav.flex.align-center
 				li
 					a.btn.btn--ghost(href="") skip the waiting list
 				li
 					a.btn.btn--default(href="") Register now
+			.burger-menu
+				.bar.bar--top
+				.bar.bar--middle
+				.bar.bar--bottom

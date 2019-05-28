@@ -2,19 +2,19 @@ extends ../pug-src/layouts/default
 include ../pug-src/mixins/container
 
 block var
-	- title = 'Fleurn | Flowers delivered to your door every month'
+	- title = 'Sharebloom | Flowers delivered to your door every month'
 
 block content
 	- tagline = 'to HTML service for a monthly price'
 	- pages = 10
 
 	// hero
-	section#hero.flex.align-center.justify-between
+	section#hero.flex.align-center.justify-between.stagger-animation(data-scroll="false")
 		.container.col-lg-6.offset-lg-0.col-md-8.offset-md-1.col-12.flex.justify-center
 			.hero-content.col-xl-9.offset-xl-3.col-lg-10.offset-lg-2.col-12.flex
-				h1.col-lg-10.col-12 Flowers delivered to your door every month
-				p.size-big.col-lg-9.col-12 Flowers delivered to you or your significant other in Downtown Toronto from amazing florists. Change or cancel your plan at any time. No questions asked.
-				.button-wrapper.col-12
+				h1.col-lg-10.col-12.anim-item Flowers delivered to your door every month
+				p.size-big.col-lg-9.col-12.anim-item Flowers delivered to you or your significant other in Downtown Toronto from amazing florists. Change or cancel your plan at any time. No questions asked.
+				.button-wrapper.col-12.anim-item
 					a.btn.btn--default.btn--big(href="") Register now
 					h6 Coming Summer 2019
 
@@ -29,63 +29,65 @@ block content
 				img.ground.ground-2(src="img/hero/ground.png" alt="Ground")
 
 	// banner
-	section#banner.flex.justify-center
+	section#banner.flex.justify-center.stagger-animation
 		+container('flex justify-between align-center')
-			.content.col-xl-5.col-md-7.flex.flex--unwrap.align-center
+			.content.col-xl-5.col-md-7.flex.flex--unwrap.align-center.anim-item
 				img(src="img/hi.png" alt="Skip the waiting list")
 				p If I were you, I would consider getting this for my significant other  👀
-			a.btn.btn--silver.btn--big(href="") Skip the waiting list
+			a.btn.btn--silver.btn--big(href="").anim-item Skip the waiting list
 
 	// subscribe
 	section#subscribe.flex.justify-center.w-pd
 		+container('flex justify-center')
-			div.col-xl-6.col-lg-8.col-md-9.col-12
-				h2 Subscribe to happiness for you or your significant other
-				p Want to show someone you really love and appreciate them? An annual flower subscription gets you thoughtfulness points every month. That’s pretty awesome.
+			div.col-xl-6.col-lg-8.col-md-9.col-12.stagger-animation
+				h2.anim-item Subscribe to happiness for you or your significant other
+				p.anim-item Want to show someone you really love and appreciate them? An annual flower subscription gets you thoughtfulness points every month. That's pretty awesome.
 			- subsFeatures = [ 'Choose your style and arrangment', 'One Click Easy Subscription', 'Guaranteed smiles every month' ]
-			.col-xl-7.col-lg-9.col-md-10.col-12.flex.subscribe-features
+			.col-xl-7.col-lg-9.col-md-10.col-12.flex.subscribe-features.stagger-animation
 				for item, i in subsFeatures
-					.col-md-4.col-12.feature-item
+					.col-md-4.col-12.feature-item.anim-item
 						img(src="img/subscribe-icons/" + (i + 1) + ".svg" alt= item)
 						h5= item
 
 	// features
 	section#features
 		// feature 1
-		div.feature-item.flex.justify-center
-			+container('flex align-center')
-				figure.feature-img.col-md-6
-					img(src="img/features/1.svg" alt="A new boquet every month")
-				.feature-content.col-lg-4.offset-lg-1.col-md-5.offset-md-1
-					h2 A New Bouquet Every Month
-					p Once you choose the style you like you will receive a new bouquet every month automatically
+		div.feature-item.flex.justify-center.stagger-animation
+			+container('flex align-center feature-container')
+				figure.feature-img.col-md-6.col-6
+					img.anim-item(src="img/features/1.svg" alt="A new boquet every month")
+				.feature-content.col-lg-4.offset-lg-1.col-md-5.offset-md-1.col-12
+					h2.anim-item A New Bouquet Every Month
+					p.anim-item Once you choose the style you like you will receive a new bouquet every month automatically
 		// feature 2
 		div.feature-item.flex.justify-center
-			+container('flex align-center')
-				.feature-content.col-lg-4.offset-lg-1.col-md-5
-					h2 Sourced from your local florist
-					p We partner with local florists to ensure that your bouquets are fresh upon delivery and sourced ethically. We like nature, and want to keep it.
-				figure.feature-img.col-md-6.offset-md-1
-					img(src="img/features/2.svg" alt="Sourced from your local florist")
+			+container('flex align-center feature-container stagger-animation')
+				.feature-content.col-lg-4.offset-lg-1.col-md-5.col-12
+					h2.anim-item Sourced from your local florist
+					p.anim-item We partner with local florists to ensure that your bouquets are fresh upon delivery and sourced ethically. We like nature, and want to keep it.
+				figure.feature-img.col-md-6.offset-md-1.col-6
+					img.anim-item(src="img/features/2.svg" alt="Sourced from your local florist")
 		// feature 3
-		div.feature-item.flex.justify-center.flex.align-center
-			figure.feature-img.col-md-6
-				img(src="img/features/3.svg" alt="A gift that keeps on giving")
-			.col-md-6
-				+container('flex')
-					.feature-content.col-lg-6.offset-lg-2.col-md-9.offset-md-2
-						h2 A gift that keeps on giving
-						p Surprise your significant other with the gift that keeps on giving with our annual subscription. Why not make every day a special occassion?
+		div.feature-item.stagger-animation
+			.feature-container.flex.justify-center.flex.align-center
+				figure.feature-img.col-md-6.col-6
+					img.anim-item(src="img/features/3.svg" alt="A gift that keeps on giving")
+				.col-md-6.col-12
+					+container('flex')
+						.feature-content.offset-lg-2.col-lg-8.col-md-9.offset-md-2
+							h2.anim-item A gift that keeps on giving
+							p.anim-item Surprise your significant other with the gift that keeps on giving with our annual subscription. Why not make every day a special occassion?
 
 	// sign up
-	section#signup.flex.justify-center.w-pd
+	section#signup.flex.justify-center.w-pd.stagger-animation
 		img.pattern(src="img/dot-pattern.png" alt="Pattern")
-		.container.col-xl-6.col-lg-7.col-md-8.col-11
-			h2 Sign up today to get exclusive early bird access
-			p If you live in Toronto, subscribe today to get notifications for when we launch and you will get in on excluisve promos for early subscribers
-			.button-wrapper
+		.container.col-xl-6.col-lg-7.col-md-8.col-10
+			h2.anim-item Sign up today to get exclusive early bird access
+			p.anim-item If you live in Toronto, subscribe today to get notifications for when we launch and you will get in on excluisve promos for early subscribers
+			.button-wrapper.anim-item
 				a.btn.btn--default.btn--big(href="") sign up now
 
 block script
+	script(src="js/ScrollMonitor.min.js")
 	script(src="js/TweenMax.min.js")
 	script(src="js/main.js")
