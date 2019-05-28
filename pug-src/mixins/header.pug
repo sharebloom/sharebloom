@@ -5,9 +5,9 @@ mixin header()
 				img(src="img/logo.svg" alt="Sharebloom")
 			ul.nav.flex.align-center
 				li
-					a.btn.btn--ghost(href="") skip the waiting list
+					.btn.btn--ghost.open-popup-trigger(data-popup="viral-loops") skip the waiting list
 				li
-					a.btn.btn--default(href="") Register now
+					.btn.btn--default.open-popup-trigger(data-popup="mailchimp") Register now
 			.burger-menu
 				.bar.bar--top
 				.bar.bar--middle

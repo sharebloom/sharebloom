@@ -30,12 +30,6 @@ burgerMenu.addEventListener('click', function() {
 	header.classList.toggle('show-mobile-menu');
 });
 
-body.addEventListener('keyup', function(e) {
-	if(e.keyCode == 27) {
-
-	}
-})
-
 var groundWrapper = document.querySelector('#hero .ground-wrapper');
 var wrapperWidth = groundWrapper.clientWidth;
 var heroTL = new TimelineMax({
@@ -90,26 +84,17 @@ heroTL
 
 // scroll animations
 function animFly(items, options) {
-	if(options.state == 'forward') {
 
-		TweenMax.staggerFrom(items, options.duration, {
-			delay: options.delay,
-			y: options.y,
-			ease: Power4.easeOut
-		}, options.repeatDelay)
-		TweenMax.staggerTo(items, options.duration, {
-			delay: options.delay,
-			opacity: 1
-		}, options.repeatDelay)
+	TweenMax.staggerFrom(items, options.duration, {
+		delay: options.delay,
+		y: options.y,
+		ease: Power4.easeOut
+	}, options.repeatDelay)
+	TweenMax.staggerTo(items, options.duration, {
+		delay: options.delay,
+		opacity: 1
+	}, options.repeatDelay)
 
-	} else {
-
-		TweenMax.staggerTo(items, options.duration, {
-			opacity: 0,
-			y: options.y * -1
-		}, options.repeatDelay)
-
-	}
 }
 
 // stagger animation
@@ -129,7 +114,6 @@ if(staggerAnims) {
 		if(animScroll == 'false') {
 
 			animFly(animItems, {
-				state: 'forward',
 				duration: .85,
 				delay: .3,
 				y: yAnim,
@@ -142,7 +126,6 @@ if(staggerAnims) {
 			animWatcher.enterViewport(function() {
 				if(!animState) {
 					animFly(animItems, {
-						state: 'forward',
 						duration: .85,
 						delay: 0,
 						y: yAnim,
@@ -154,9 +137,32 @@ if(staggerAnims) {
 
 		}
 
-		animWatcher.exitViewport(function() {
-			console.log('exit');
-		})
 	});
 
+}
+
+// popup
+var popup = document.querySelector('#popup');
+var openTrigger = document.querySelectorAll('.open-popup-trigger');
+var closeTrigger = document.querySelector('.close-popup-trigger');
+
+openTrigger.forEach(function(open) {
+	open.addEventListener('click', function() {
+		var data = this.getAttribute('data-popup');
+		popup.classList.add('is-active', data);
+	})
+})
+
+closeTrigger.addEventListener('click', function() {
+	closePopup();
+});
+
+body.addEventListener('keyup', function(e) {
+	if(e.keyCode == 27) {
+		closePopup();
+	}
+});
+
+function closePopup() {
+	popup.className = '';
 }

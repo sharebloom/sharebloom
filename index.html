@@ -16,15 +16,15 @@
       </div>
       <div class="popup viral-loops flex justify-center">
         <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex justify-center align-center">
-          <div class="content"><div data-vl-widget="embedForm"></div></div>
+          <div class="content anim-item"><div data-vl-widget="embedForm"></div></div>
         </div>
       </div>
       <div class="popup mailchimp flex justify-center">
         <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex justify-center align-center">
           <div class="content">
-            <h3>Subscribe</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-            <form class="flex flex--unwrap">
+            <h3 class="anim-item">Subscribe</h3>
+            <p class="anim-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+            <form class="flex flex--unwrap anim-item">
               <input type="email" placeholder="Email Address" required="required"/>
               <input type="submit" value="Send"/>
             </form>
@@ -36,8 +36,12 @@
     <header class="flex justify-center">
       <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex align-center"><a class="logo" href="index.html"><img src="img/logo.svg" alt="Sharebloom"/></a>
         <ul class="nav flex align-center">
-          <li><a class="btn btn--ghost" href="">skip the waiting list</a></li>
-          <li><a class="btn btn--default" href="">Register now</a></li>
+          <li>
+            <div class="btn btn--ghost open-popup-trigger" data-popup="viral-loops">skip the waiting list</div>
+          </li>
+          <li>
+            <div class="btn btn--default open-popup-trigger" data-popup="mailchimp">Register now</div>
+          </li>
         </ul>
         <div class="burger-menu">
           <div class="bar bar--top"></div>
@@ -53,7 +57,8 @@
         <div class="hero-content col-xl-9 offset-xl-3 col-lg-10 offset-lg-2 col-12 flex">
           <h1 class="col-lg-10 col-12 anim-item">Flowers delivered to your door every month</h1>
           <p class="size-big col-lg-9 col-12 anim-item">Flowers delivered to you or your significant other in Downtown Toronto from amazing florists. Change or cancel your plan at any time. No questions asked.</p>
-          <div class="button-wrapper col-12 anim-item"><a class="btn btn--default btn--big" href="">Register now</a>
+          <div class="button-wrapper col-12 anim-item">
+            <div class="btn btn--default btn--big open-popup-trigger" data-popup="mailchimp">Register now</div>
             <h6>Coming Summer 2019</h6>
           </div>
         </div>
@@ -69,7 +74,8 @@
       <div class="container col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 flex justify-between align-center">
         <div class="content col-xl-5 col-md-7 flex flex--unwrap align-center anim-item"><img src="img/hi.png" alt="Skip the waiting list"/>
           <p>If I were you, I would consider getting this for my significant other  👀</p>
-        </div><a class="btn btn--silver btn--big anim-item" href="">Skip the waiting list</a>
+        </div>
+        <div class="btn btn--silver btn--big open-popup-trigger anim-item" data-popup="viral-loops">Skip the waiting list</div>
       </div>
     </section>
     <!-- subscribe-->
@@ -134,7 +140,9 @@
       <div class="container col-xl-6 col-lg-7 col-md-8 col-10">
         <h2 class="anim-item">Sign up today to get exclusive early bird access</h2>
         <p class="anim-item">If you live in Toronto, subscribe today to get notifications for when we launch and you will get in on excluisve promos for early subscribers</p>
-        <div class="button-wrapper anim-item"><a class="btn btn--default btn--big" href="">sign up now</a></div>
+        <div class="button-wrapper anim-item">
+          <div class="btn btn--default btn--big open-popup-trigger" data-popup="mailchimp">sign up now</div>
+        </div>
       </div>
     </section>
     <!-- footer-->
