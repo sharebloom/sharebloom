@@ -9,7 +9,7 @@ mixin footer()
 						a(href= hrefs[i] class= "icon-" + icon)
 			ul.footer-nav.flex.justify-center
 				- nav = [ 'Privacy Policy', 'Terms of Use' ]
-				- hrefs = [ 'terms', 'privacy' ]
+				- hrefs = [ 'privacy', 'terms' ]
 				for item, i in nav
 					li
 						a(href= hrefs[i] + '.html')= item
